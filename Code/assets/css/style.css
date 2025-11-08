@@ -1,0 +1,224 @@
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #322c37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    opacity: 0.95;
+    background: #2b262f;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 10px 14px 12px rgba(98, 69, 191, 0.1), -10px -14px 12px rgba(191, 69, 140, 0.1);
+}
+
+.header-msg {
+    color: #e8e8e8;
+    margin-bottom: 10px;
+}
+.description-msg {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+.feedback-form textarea {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #2d2836;
+    color: rgb(223, 212, 222);
+    width: 95%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid #7c597756;
+    resize: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* From Uiverse.io by faxriddin20 */ 
+.ui-btn {
+  --btn-default-bg: #2e2630;
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(45, 36, 44);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(116, 39, 90, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: rgb(218, 121, 217);
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+    margin: 10px auto;
+    border: 2px solid rgba(246, 149, 220, 0.422);
+    width: 100%;
+    border-radius: 8px;
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span,
+.ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before,
+.ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+
+.view-wall-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #eb74d1;
+    font-weight: 600;
+}
+
+.success {
+    color: rgb(109, 179, 109);
+    font-weight: 500;
+}
+
+.error {
+    color: rgb(215, 95, 95);
+    font-weight: 500;
+}
