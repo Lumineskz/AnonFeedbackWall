@@ -6,6 +6,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    flex-direction: column;
 }
 
 .container {
@@ -29,6 +30,154 @@ body {
     font-size: 1rem;
     opacity: 0.8;
 }
+/* From Uiverse.io by 3HugaDa3 */ 
+.checkbox-wrapper {
+  --checkbox-size: 25px;
+  --checkbox-color: #e386d7;
+  --checkbox-shadow: rgba(200, 0, 255, 0.3);
+  --checkbox-border: rgba(255, 0, 234, 0.7);
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-wrapper .checkmark {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 2px solid var(--checkbox-border);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px var(--checkbox-shadow);
+  overflow: hidden;
+}
+
+.checkbox-wrapper .checkmark::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--checkbox-color), #00ffcc);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(0) rotate(-45deg);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark::before {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.checkbox-wrapper .checkmark svg {
+  width: 0;
+  height: 0;
+  color: #1a1a1a;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.checkbox-wrapper input:checked ~ .checkmark svg {
+  width: 18px;
+  height: 18px;
+  transform: rotate(360deg);
+}
+
+.checkbox-wrapper:hover .checkmark {
+  border-color: var(--checkbox-color);
+  transform: scale(1.1);
+  box-shadow:
+    0 0 20px var(--checkbox-shadow),
+    0 0 40px var(--checkbox-shadow),
+    inset 0 0 10px var(--checkbox-shadow);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  animation: pulse 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--checkbox-shadow);
+  }
+  50% {
+    transform: scale(0.9);
+    box-shadow:
+      0 0 30px var(--checkbox-shadow),
+      0 0 50px var(--checkbox-shadow);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--checkbox-shadow);
+  }
+}
+
+.checkbox-wrapper .label {
+  margin-left: 15px;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--checkbox-color);
+  font-size: 18px;
+  text-shadow: 0 0 10px var(--checkbox-shadow);
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.checkbox-wrapper:hover .label {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Glowing dots animation */
+.checkbox-wrapper::after,
+.checkbox-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--checkbox-color);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.checkbox-wrapper::before {
+  left: -10px;
+  top: 50%;
+}
+
+.checkbox-wrapper::after {
+  right: -10px;
+  top: 50%;
+}
+
+.checkbox-wrapper:hover::before {
+  opacity: 1;
+  transform: translateX(-10px);
+  box-shadow: 0 0 10px var(--checkbox-color);
+}
+
+.checkbox-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(10px);
+  box-shadow: 0 0 10px var(--checkbox-color);
+}
+
+
 .feedback-form .name{
     font-family: 'JetBrains Mono', monospace;
     background-color: #2d2836;
@@ -245,4 +394,149 @@ body {
 .error {
     color: rgb(215, 95, 95);
     font-weight: 500;
+}
+
+
+/* Login form CSS */
+
+.login-form{
+  background-color: #2e2833;
+  padding: 15px;
+  width: 20%;
+  border-radius: 12px;
+  box-shadow: 10px 14px 12px rgba(98, 69, 191, 0.1), -10px -14px 12px rgba(191, 69, 140, 0.1);
+}
+.login-form input{
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #443555;
+  color: rgb(223, 212, 222);
+  width: 95%;
+  height: 30px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 3px solid #7c597756;
+  border-radius: 8px;
+
+}
+
+.login-form input:focus{
+  border: 3px solid #7c597791;
+}
+.login-form label{
+  color: #e8e8e8;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login-form button{
+  margin-top: 10px;
+  width: 98%;
+  background-color: #2e2833;
+  color: #7c59777b;
+  padding: 8px 8px;
+  outline: none;
+  border: 3px solid #7c597756;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.login-form select{
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #443555;
+  color: rgb(223, 212, 222);
+  width: 98%;
+  height: 35px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 3px solid #7c597756;
+  outline: none;
+  transition: 0.3s ease;
+}
+.login-form select:focus{
+  border: 3px solid #7c597791;
+}
+.login-form button:hover{
+  border: 3px solid #7c597791;
+  color: #eb74d179;
+}
+.form-head{
+  color: #e8e8e8;
+  text-align: center;
+}
+
+.error{
+  color: rgb(215, 95, 95);
+}
+
+/* Header file php css*/
+.main-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    color: #4e4260;
+    padding: 12px 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.header-left .username {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.header-right .logout-btn {
+    background: #ffcdf4;
+    color: #b465d1;
+    margin-left: 10px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.header-right .logout-btn:hover {
+    background: #7700b3;
+    color: #fff;
+}
+.wall-head{
+  color: #e8e8e8;
+  margin: 5px 10px;
+}
+.info-msg {
+  color: white;
+  margin: 5px 10px;
+}
+
+/* Wall Post */
+.post{
+    background-color: #3a3240;
+    color: #e0d7e8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 60%;
+    margin: 10px 10px;
+}
+.wall-feed{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wall-container {
+  background-color: #2e2833;
+    margin-top: 80px; /* Adjust based on header height */
+    width: 100%;
+    height: 100vh;
+    max-width: 1800px;
+}
+.wall-page{
+  margin-top: 50px;
 }
