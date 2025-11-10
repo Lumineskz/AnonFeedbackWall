@@ -9,10 +9,11 @@
 <body>
     <div class="container">
         <h1 class="header-msg">Anonymous Feedback Wall</h1>
-        <p class="description-msg">Share your thoughts freely — no names, no logins, just honesty.</p>
+        <p class="description-msg">Share your thoughts freely — no logins, just honesty.</p>
 
         <!-- Feedback Form -->
         <form action="" method="POST" class="feedback-form">
+            <input type="text" class="name" placeholder="Username(Optional)" name="username">
             <textarea name="message" placeholder="Write your feedback here..." required></textarea>
             <button class="ui-btn" type="submit" name="submit_feedback">
                 <span> Submit </span>

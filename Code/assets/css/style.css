@@ -29,6 +29,24 @@ body {
     font-size: 1rem;
     opacity: 0.8;
 }
+.feedback-form .name{
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #2d2836;
+    color: rgb(223, 212, 222);
+    width: 95%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid #7c597756;
+    resize: none;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+.name:focus{
+  border: 3px solid #7c597791;
+}
 .feedback-form textarea {
     font-family: 'JetBrains Mono', monospace;
     background-color: #2d2836;
@@ -41,6 +59,11 @@ body {
     resize: none;
     font-size: 1rem;
     outline: none;
+    transition: 0.3s ease;
+}
+
+.feedback-form textarea:focus{
+  border: 3px solid #7c597795;
 }
 
 /* From Uiverse.io by faxriddin20 */ 
@@ -66,7 +89,7 @@ body {
 
 .ui-btn {
     margin: 10px auto;
-    border: 2px solid rgba(246, 149, 220, 0.422);
+    border: 3px solid rgba(246, 149, 220, 0.422);
     width: 100%;
     border-radius: 8px;
   box-sizing: border-box;
@@ -101,6 +124,7 @@ body {
 .ui-btn:hover,
 .ui-btn:focus {
   background: var(--btn-hover-bg);
+  border: 3px solid rgba(218, 121, 216, 0.864);
 }
 
 .ui-btn:hover span,
