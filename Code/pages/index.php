@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <?php include('../includes/header.php'); ?>
     <div class="container">
         <h1 class="header-msg">Anonymous Feedback Wall</h1>
         <p class="description-msg">Share your thoughts freely — no logins, just honesty.</p>

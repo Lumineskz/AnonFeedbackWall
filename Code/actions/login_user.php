@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $conn->close();
             
             // 8. Redirect to the Wall
-            header("Location: ../pages/wall.php");
+            header("Location: ../pages/index.php");
             exit();
 
         } else {
