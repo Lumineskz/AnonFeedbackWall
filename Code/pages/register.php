@@ -21,6 +21,7 @@
             <option value="BCA">BCA</option>
         </select>
         <button type="submit">Register</button>
+        <input type="button" value="Have an account? Log in" onclick="window.location.href = 'login.php';" class="signup-btn">
     </form>
 </body>
 </html>

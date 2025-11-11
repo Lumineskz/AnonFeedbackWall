@@ -406,10 +406,11 @@ body {
   border-radius: 12px;
   box-shadow: 10px 14px 12px rgba(98, 69, 191, 0.1), -10px -14px 12px rgba(191, 69, 140, 0.1);
 }
-.login-form input{
+.login-form input[type="text"],
+.login-form input[type="password"]{
   font-family: 'JetBrains Mono', monospace;
   background-color: #443555;
-  color: rgb(223, 212, 222);
+  color: rgb(224, 156, 219);
   width: 95%;
   height: 30px;
   margin-bottom: 10px;
@@ -419,7 +420,7 @@ body {
 
 }
 
-.login-form input:focus{
+.login-form input[type="text"]:focus,input[type="password"]:focus{
   border: 3px solid #7c597791;
 }
 .login-form label{
@@ -429,15 +430,47 @@ body {
   margin-bottom: 5px;
   display: block;
 }
+/* signup button styles */
+.signup-btn,
+input[type="button"].signup-btn,
+input[type="submit"].signup-btn {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #b641a5ad;
+  color: #ffffff;
+  border: 3px solid rgba(235, 116, 209, 0.244);
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 98%;
+  margin: 10px 0 0 0;
+  text-align: center;
+  vertical-align: middle;
+}
 
+.signup-btn:hover,
+input[type="button"].signup-btn:hover,
+input[type="submit"].signup-btn:hover {
+  background-color: #b641a5b7;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(235,116,209,0.12);
+}
+
+.signup-btn:focus,
+input[type="button"].signup-btn:focus,
+input[type="submit"].signup-btn:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(235,116,209,0.25);
+}
 .login-form button{
   margin-top: 10px;
   width: 98%;
   background-color: #2e2833;
-  color: #7c59777b;
+  color: #7c5977b1;
   padding: 8px 8px;
   outline: none;
-  border: 3px solid #7c597756;
+  border: 3px solid #7c59778f;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -456,12 +489,13 @@ body {
   outline: none;
   transition: 0.3s ease;
 }
+
 .login-form select:focus{
   border: 3px solid #7c597791;
 }
 .login-form button:hover{
-  border: 3px solid #7c597791;
-  color: #eb74d179;
+  border: 3px solid #9d6d9691;
+  color: #f092db79;
 }
 .form-head{
   color: #e8e8e8;

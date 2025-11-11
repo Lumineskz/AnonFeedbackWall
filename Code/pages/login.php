@@ -36,6 +36,7 @@
         <label for="">Password</label>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
+        <input type="button" value="No Account? Sign Up!" onclick="window.location.href = 'register.php';" class="signup-btn">
     </form>
 </body>
 </html>
