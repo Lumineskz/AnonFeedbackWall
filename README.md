@@ -1,121 +1,71 @@
-# 🧱 Anonymous Feedback Wall  
-
-![Banner](https://raw.githubusercontent.com/yourusername/anonymous-feedback-wall/main/assets/banner.png)  
+# Anonymous Feedback Wall
+![Banner](https://github.com/Lumineskz/AnonFeedbackWall/tree/main/Code/assets/banner.png)  
 *A simple and secure platform for sharing thoughts without revealing identity.*
 
 ---
-
-## 🌐 Overview  
-The **Anonymous Feedback Wall** is a PHP-based web application that allows users to post feedback or messages anonymously.  
-It promotes **honest communication**, **transparency**, and **constructive interaction** within teams, classrooms, or organizations — without fear of exposure.
-
+### ✨ Overview
+This project is a simple, modern, and anonymous Feedback Wall application. It allows users to post feedback, comments, or suggestions, with the option to remain completely anonymous or display their chosen username. Built using a standard web stack (HTML, CSS, JS, PHP, and a database), it provides a functional and secure way to gather user input.
 ---
-
-### ✨ Key Highlights  
-✅ 100% Anonymous feedback system  
-✅ Clean, responsive UI (HTML + CSS + JS)  
-✅ Secure PHP backend with MySQL database  
-✅ Optional admin moderation panel  
-✅ Lightweight and deployable anywhere  
-
+### 🚀 Features
+• Anonymous Posting: Users can choose to hide their username and post feedback anonymously.
+• Username Display: Users have the option to provide a username that will be displayed with their feedback.
+• Modern UI: A clean and responsive user interface designed with HTML and CSS.
+• Client-Side Validation: Basic form validation handled by JavaScript.
+• Server-Side Processing: Secure handling and storage of feedback using PHP.
+• Time/Date Stamping: Each post is automatically stamped with the date and time it was submitted.
 ---
-
-## 🧩 Table of Contents  
-1. [Introduction](#-introduction)  
-2. [Features](#-features)  
-3. [Problem Statement](#-problem-statement)  
-4. [Objectives](#-objectives)  
-5. [Scope & Application](#-scope--application)  
-6. [Proposed Methodology](#-proposed-methodology)  
-7. [Tech Stack](#-tech-stack)  
-8. [Installation](#-installation)  
-9. [Usage](#-usage)  
-10. [Future Enhancements](#-future-enhancements)  
-11. [Screenshots](#-screenshots)  
-12. [Contributors](#-contributors)  
-13. [License](#-license)  
-
+### 💻 Technologies Used
+Category	Technology	Description
+Frontend	HTML5	Structure and content of the application.
+Styling	CSS3	Presentation and responsiveness.
+Interactivity	JavaScript (ES6+)	Client-side logic and form handling.
+Backend	PHP	Server-side logic for processing and storing feedback.
+Database	MySQL / SQLite	Storage for the feedback posts.
 ---
+### 🛠️ Installation and Setup
+### Prerequisites
+You will need a local server environment (like XAMPP, MAMP, or WAMP) with PHP and your chosen Database running.
+1. Clone the Repository
+git clone https://github.com/YourUsername/AnonFeedbackWall.git
+cd anonymous-feedback-wall
+2. Database Setup
+Create a Database: Open phpMyAdmin and create a new database (e.g., feedback_db).
+Run the following SQL query to create the feedback table:
+CREATE TABLE feedback (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NULL,
+    content TEXT NOT NULL,
+    is_anonymous BOOLEAN NOT NULL DEFAULT 0,
+    post_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+3. Configure Database Connection (PHP)
+<?php
+// Example PHP configuration
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'your_password');
+define('DB_NAME', 'feedback_db');
+?>
+4. Run the Application
+Place the project folder into your web server's root directory (e.g., htdocs for XAMPP). Then visit: http://localhost/anonymous-feedback-wall/
 
-## 📖 Introduction  
-Many individuals hesitate to express their true opinions due to judgment or social pressure.  
-The **Anonymous Feedback Wall** provides a digital space for anyone to voice feedback freely and constructively, ensuring **honesty** and **mutual understanding**.
-
+### 📝 Usage
+• Open the page: Navigate to the main index file.
+• Enter Feedback: Type your comment or suggestion into the input area.
+• Choose Identity: Leave username blank for anonymous posting, or fill it in to post with a name.
+• Submit: Click the 'Post Feedback' button.
 ---
-
-## 💡 Features  
-- 📝 Post feedback anonymously  
-- 💬 Real-time display of all messages  
-- 🧹 Optional admin moderation panel  
-- 🧠 Simple and minimal design  
-- 📱 Fully responsive and mobile-friendly  
-
+### 🤝 Contributing
+Contributions are always welcome!
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request.
 ---
-
-## 🧠 Problem Statement  
-People often avoid giving honest opinions in public due to fear of criticism or identity exposure.  
-This project creates a **trust-based feedback environment**, removing the identity barrier to allow genuine opinions to surface.
-
+### 📜 License
+Distributed under the MIT License. See LICENSE for more information.
 ---
-
-## 🎯 Objectives  
-- Build a platform for collecting **anonymous feedback**  
-- Promote **open and honest communication**  
-- Implement a **clean, user-friendly interface**  
-- Provide basic moderation options for admins  
-
----
-
-## 🌍 Scope & Application  
-This system can be adapted for:  
-- 🎓 **Colleges & Schools** – Student–Teacher feedback  
-- 💼 **Offices & Teams** – Peer or project feedback  
-- 🎤 **Events & Communities** – Audience suggestions  
-
-Can be hosted locally (XAMPP) or online on any PHP server.
-
----
-
-## 🧠 Proposed Methodology  
-**Frontend:** HTML, CSS, JavaScript  
-**Backend:** PHP  
-**Database:** MySQL  
-
-🧩 **System Flow:**  
-1. User writes feedback (no login needed)  
-2. PHP validates and stores it in MySQL  
-3. Feedback dynamically appears on the wall  
-
----
-
-## 🛠 Tech Stack  
-| Category | Technology |
-|-----------|-------------|
-| Frontend | HTML5, CSS3, JavaScript |
-| Backend | PHP |
-| Database | MySQL |
-| Hosting | XAMPP / Localhost / 000webhost |
-| Version Control | Git & GitHub |
-
----
-
-## ⚙️ Installation  
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/anonymous-feedback-wall.git
-    ```
-2. ** Move to web directory **
-- (XAMPP): htdocs/anonymous-feedback-wall
-3. **Setup database**
-- Import feedback.sql file into phpMyAdmin
-4. **Configure credentials**
-- Edit config.php with your MySQL username/password
-5. **Run Locally**
-  ```arduino
-  http://localhost/anonymous-feedback-wall
-  ```
-"# AFW-project"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin git@github.com:Lumineskz/AFW-project.git git push -u origin main
-"# AFW-project" 
-"# AnonFeedbackWall" 
-"# AnonFeedbackWall" 
+### 📧 Contact
+Shulabh Shrestha - shubhamsulabh6@gmail.com
+Project Link: https://github.com/Lumineskz/AnonFeedbackWall/
