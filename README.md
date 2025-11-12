@@ -1,5 +1,5 @@
 # Anonymous Feedback Wall
-![Banner](https://github.com/Lumineskz/AnonFeedbackWall/tree/main/Code/assets/banner.png)  
+![Anonymous Feedback Wall Banner](https://github.com/Lumineskz/AnonFeedbackWall/blob/main/Code/assets/images/banner.png)  
 *A simple and secure platform for sharing thoughts without revealing identity.*
 
 ---
