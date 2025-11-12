@@ -53,7 +53,7 @@ Place the project folder into your web server's root directory (e.g., htdocs for
 - Open the page: Navigate to the main index file.
 - Enter Feedback: Type your comment or suggestion into the input area.
 - Choose Identity: Leave username blank for anonymous posting, or fill it in to post with a name.
-- Submit: Click the 'Post Feedback' button.
+- Submit: Click the 'Submit' button.
 ---
 ### 🤝 Contributing
 Contributions are always welcome!
