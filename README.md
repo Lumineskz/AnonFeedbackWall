@@ -4,7 +4,7 @@
 
 ---
 ### ✨ Overview
-This project is a simple, modern, and anonymous Feedback Wall application. It allows users to post feedback, comments, or suggestions, with the option to remain completely anonymous or display their chosen username. Built using a standard web stack (HTML, CSS, JS, PHP, and a database), it provides a functional and secure way to gather user input.
+- This project is a simple, modern, and anonymous Feedback Wall application. It allows users to post feedback, comments, or suggestions, with the option to remain completely anonymous or display their chosen username. Built using a standard web stack (HTML, CSS, JS, PHP, and a database), it provides a functional and secure way to gather user input.
 ---
 ### 🚀 Features
 - Anonymous Posting: Users can choose to hide their username and post feedback anonymously.
