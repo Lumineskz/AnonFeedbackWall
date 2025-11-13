@@ -51,7 +51,7 @@ $result = $stmt->get_result();
             <?php while($row = $result->fetch_assoc()): ?>
                 <div class="post">
                     <!-- Username with strong tag for emphasis -->
-                    <strong><?= htmlspecialchars($row['username']) ?></strong>
+                    <strong class="post-author"><?= htmlspecialchars($row['username']) ?></strong>
                     <!-- Feedback message -->
                     <p class="post-message"><?= htmlspecialchars($row['message']) ?></p>
                     <!-- Timestamp -->
