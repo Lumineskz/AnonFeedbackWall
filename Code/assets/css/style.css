@@ -514,9 +514,9 @@ input[type="submit"].signup-btn:focus {
     top: 0;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
-    color: #4e4260;
-    padding: 12px 20px;
+    background: #f9e8fa;
+    color: #90537e;
+    padding: 15px 10px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }

@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
 
 <header class="main-header">
     <div class="header-left">
-        <span class="username">👤 <?= htmlspecialchars($_SESSION['username']); ?></span>
+        <span class="username"> Hi, <?= strtoupper(htmlspecialchars($_SESSION['username'])); ?></span>
     </div>
     <div class="header-right">
         <a href="../pages/logout.php" class="logout-btn">Log Out</a>
