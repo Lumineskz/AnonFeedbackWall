@@ -11,7 +11,7 @@ body {
 
 .container {
     opacity: 0.95;
-    background: #28242db8;
+    background: #352f3cb8;
     border-radius: 12px;
     padding: 2rem;
     width: 90%;
@@ -400,7 +400,7 @@ body {
 /* Login form CSS */
 
 .login-form{
-  background-color: #28242db8;
+  background-color: #352f3cb8;
   padding: 15px;
   width: 20%;
   border-radius: 12px;
@@ -514,9 +514,10 @@ input[type="submit"].signup-btn:focus {
     top: 0;
     justify-content: space-between;
     align-items: center;
-    background: #f9e8fa;
-    color: #90537e;
-    padding: 15px 10px;
+    background: #51295367;
+    color: #d38ebf;
+    padding: 20px 10px;
+    width: 100%;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
@@ -524,9 +525,11 @@ input[type="submit"].signup-btn:focus {
 .header-left .username {
     font-weight: 600;
     font-size: 1.05rem;
+    margin-left: 20px;
 }
 
 .header-right .logout-btn {
+    margin-right: 20px;
     background: #ffcdf4;
     color: #b465d1;
     margin-left: 10px;
@@ -538,8 +541,8 @@ input[type="submit"].signup-btn:focus {
 }
 
 .header-right .logout-btn:hover {
-    background: #7700b3;
-    color: #fff;
+    background: #f3d5ed;
+    color: #9d59b6;
 }
 .wall-head{
   color: #e8e8e8;
