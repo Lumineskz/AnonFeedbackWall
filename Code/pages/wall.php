@@ -34,12 +34,13 @@ $result = $stmt->get_result();
     <title><?= htmlspecialchars($group) ?> Feedback Wall</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body class="wall-page">
     
     <?php include('../includes/header.php'); ?>
     
     <!-- WRAP the content in the .container class and add margin-top to clear the fixed header -->
-     
+        <a href="./index.php" class="back-btn">← Back to post feedback</a>
         <h1 class="header-msg">Welcome to the <?= htmlspecialchars($group) ?> Feedback Wall</h1>
         <p class="description-msg">This is the centralized feedback for your group.</p>
 <div class="wall-container">

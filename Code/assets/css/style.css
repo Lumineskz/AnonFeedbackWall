@@ -28,7 +28,6 @@ body {
     color: #b0b0b0;
     margin-bottom: 20px;
     font-size: 1rem;
-    opacity: 0.8;
 }
 /* From Uiverse.io by 3HugaDa3 */ 
 .checkbox-wrapper {
@@ -520,6 +519,8 @@ input[type="submit"].signup-btn:focus {
     width: 100%;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px) saturate(180%);
+    box-shadow: inset 5px 5px 10px rgba(255, 175, 250, 0.614);
 }
 
 .header-left .username {
@@ -552,7 +553,13 @@ input[type="submit"].signup-btn:focus {
   color: white;
   margin: 5px 10px;
 }
-
+.back-btn{
+  color: #f795cb;
+  margin-top: 30px;
+}
+.back-btn:hover{
+  text-decoration: dotted;
+}
 /* Wall Post */
 .post{
     background-color: #2b252f;
@@ -592,4 +599,47 @@ input[type="submit"].signup-btn:focus {
 }
 .wall-page{
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .login-form{
+      width: 80%;
+    }
+    .container {
+      width: 80%;
+      margin: 10px;
+      padding: 1.5rem;
+    } 
+    .container .header-msg{
+      font-size: 1.5em;
+    }
+    .container .description-msg{
+      font-size: 0.9em;
+    }
+    .label{
+      font-size: 0.9em;
+    }
+    .wall-page{
+      margin-top: 90px;
+    }
+    .wall-page .header-msg{
+      font-size: 1.5rem;
+      margin: 10px;
+    } 
+    .wall-page .description-msg{
+      font-size: 0.9rem;
+      margin: 10px;
+    }
+    .wall-container{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .wall-container .post{
+      width: 100%;
+      max-width: 700px;
+    }
+    .back-btn{
+      margin-top: 0px;
+    }
 }
