@@ -436,8 +436,8 @@ input[type="button"].signup-btn,
 input[type="submit"].signup-btn {
   font-family: 'JetBrains Mono', monospace;
   background-color: #b641a51d;
-  color: #ffffff;
-  border: 3px solid rgba(235, 116, 209, 0.244);
+  color: #eb74d177;
+  border: 3px solid #eb74d13e;
   padding: 9px 12px;
   border-radius: 8px;
   cursor: pointer;
@@ -453,7 +453,7 @@ input[type="submit"].signup-btn {
 input[type="button"].signup-btn:hover,
 input[type="submit"].signup-btn:hover {
   background-color: #b641a53e;
-  color: #fff;
+  color: #eb74d19e;
   box-shadow: 0 0 10px rgba(235,116,209,0.12);
 }
 
