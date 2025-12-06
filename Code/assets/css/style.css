@@ -394,7 +394,12 @@ body {
     color: rgb(215, 95, 95);
     font-weight: 500;
 }
-
+.text-link{
+  margin-top: 15px;
+    color: #eb74d1;
+    text-decoration: underline;
+    text-align: center;
+}
 
 /* Login form CSS */
 
@@ -501,7 +506,9 @@ input[type="submit"].signup-btn:focus {
   color: #e8e8e8;
   text-align: center;
 }
-
+.mt-3{
+  margin-top: 15px;
+}
 .error{
   color: rgb(215, 95, 95);
 }
@@ -553,6 +560,34 @@ input[type="submit"].signup-btn:focus {
   color: white;
   margin: 5px 10px;
 }
+.file-label{
+  color: #f795cb;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  display: inline-block;
+}
+.file-input{
+  margin: 5px 0px;
+  padding: 5px;
+  border-radius: 8px;
+  color: #e0d7e8;
+  background-color: #2b252f;
+  border: 3px solid #7c597756;
+  width: 96%;
+}
+.file-input::file-selector-button{
+  background-color: #7c5977c5;
+  color: #eb74d1;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.file-input::file-selector-button:hover{
+  background-color: #9d6d96a1;
+}
 .back-btn{
   color: #f795cb;
   margin-top: 30px;
@@ -568,7 +603,8 @@ input[type="submit"].signup-btn:focus {
     border-radius: 10px;
     margin-bottom: 15px;
     text-align: left;
-    max-width: 60%;
+    min-width: 90%;
+    max-width: 90%;
     margin: 10px 10px;
 }
 .post .post-author{
@@ -588,7 +624,8 @@ input[type="submit"].signup-btn:focus {
 }
 .wall-feed{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 .wall-container {
   background-color: #2e283300;
@@ -599,6 +636,17 @@ input[type="submit"].signup-btn:focus {
 }
 .wall-page{
   margin-top: 50px;
+}
+.post-image{
+    width: auto;
+    height: 150px;
+    margin-bottom: 5px;
+}
+.post-image img{
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+
 }
 
 @media (max-width: 768px) {
@@ -611,13 +659,18 @@ input[type="submit"].signup-btn:focus {
       padding: 1.5rem;
     } 
     .container .header-msg{
-      font-size: 1.5em;
+      font-size: 1.1em;
     }
     .container .description-msg{
+      font-size: 0em;
+    }
+    .checkbox-wrapper .label{
       font-size: 0.9em;
     }
-    .label{
-      font-size: 0.9em;
+    .checkbox-wrapper .checkmark{
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
     }
     .wall-page{
       margin-top: 90px;
@@ -626,20 +679,31 @@ input[type="submit"].signup-btn:focus {
       font-size: 1.5rem;
       margin: 10px;
     } 
+    .file-label{
+      font-size: 0.8rem;
+    }
     .wall-page .description-msg{
       font-size: 0.9rem;
       margin: 10px;
     }
+
     .wall-container{
         margin-top: 60px;
         display: flex;
         flex-direction: column;
     }
     .wall-container .post{
-      width: 100%;
-      max-width: 700px;
+      min-width: 80%;
+
+    }
+    .ui-btn{
+      padding: 10px 14px;
     }
     .back-btn{
       margin-top: 0px;
+    }
+    .view-wall-btn{
+      margin-top: 3px;
+      font-size: 0.8rem;
     }
 }
