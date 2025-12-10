@@ -7,7 +7,7 @@ $group = $_SESSION['group_name'];
 
 // --- FIX: Secure Query using Prepared Statements ---
 // 1. Prepare the SQL statement
-$sql = "SELECT username, message, timestamp FROM feedback WHERE group_name = ? ORDER BY timestamp DESC";
+$sql = "SELECT username, message, timestamp, image_path FROM feedback WHERE group_name = ? ORDER BY timestamp DESC";
 $stmt = $conn->prepare($sql);
 
 // Check if the statement preparation failed
@@ -55,8 +55,15 @@ $result = $stmt->get_result();
                     <strong class="post-author"><?= htmlspecialchars($row['username']) ?></strong>
                     <!-- Feedback message -->
                     <p class="post-message"><?= htmlspecialchars($row['message']) ?></p>
+                    <!-- Display image if exists -->
+                    <?php if (!empty($row['image_path'])): ?>
+                        <div class="post-image">
+                            <img src="../<?= htmlspecialchars($row['image_path']) ?>" alt="Feedback image by <?= htmlspecialchars($row['username']) ?>">
+                        </div>
+                    <?php endif; ?>
                     <!-- Timestamp -->
                     <small class="post-timestamp"><?= $row['timestamp'] ?></small>
+                    
                 </div>
             <?php endwhile; ?>
           <?php else: ?>
